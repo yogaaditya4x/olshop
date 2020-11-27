@@ -11,7 +11,6 @@ class Admin extends CI_Controller {
             'isi'   => 'v_admin'
          );
          $this->load->view('layout/v_wrapper_backend', $data, FALSE);
-         
     }
 
 }
