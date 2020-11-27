@@ -3,7 +3,7 @@
     <div class="container">
       <a href="../../index3.html" class="navbar-brand">
         <i class="fas fa-store text-primary"></i>
-        <span class="brand-text font-weight-light"><b>Toko Online</b></span>
+        <span class="brand-text font-weight-light"><b>Gameshop</b></span>
       </a>
       
       <button class="navbar-toggler order-1" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">

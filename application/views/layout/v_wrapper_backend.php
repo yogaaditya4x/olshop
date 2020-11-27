@@ -1,4 +1,5 @@
 <?php
+$this->user_login->proteksi_halaman();
 //wajiburut
 require_once('v_head.php');
 require_once('v_header_backend.php');
