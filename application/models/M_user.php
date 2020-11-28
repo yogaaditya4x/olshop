@@ -1,8 +1,9 @@
 <?php
 
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class M_user extends CI_Model {
+class M_user extends CI_Model
+{
 
     public function get_all_data()
     {
@@ -12,6 +13,10 @@ class M_user extends CI_Model {
         return $this->db->get()->result();
     }
 
+    public function add($data)
+    {
+        $this->db->insert('tbl_user', $data);
+    }
 }
 
 /* End of file M_user.php */
