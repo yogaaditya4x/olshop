@@ -47,3 +47,98 @@
     </div>
     <!-- /.card -->
 </div>
+
+
+<!-- Modal add -->
+<div class="modal fade" id="add">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Tambah kategori</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <?=
+                    form_open('kategori/add');
+                ?>
+                <div class="form-group">
+                    <label>Nama kategori</label>
+                    <input type="text" name="nama_kategori" class="form-control" placeholder="Nama kategori" required>
+                </div>
+            </div>
+            <div class="modal-footer justify-content-between">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
+                <button type="submit" class="btn btn-primary">Simpan</button>
+            </div>
+            <?=
+                form_close();
+            ?>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal add -->
+
+<!-- Modal edit -->
+<?php foreach ($kategori as $key => $value) { ?>
+    <div class="modal fade" id="edit<?= $value->id_kategori ?>">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Edit kategori</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <?=
+                        form_open('kategori/edit/' . $value->id_kategori);
+                    ?>
+                    <div class="form-group">
+                        <label>Nama kategori</label>
+                        <input type="text" name="nama_kategori" value="<?= $value->nama_kategori ?>" class="form-control" placeholder="Nama kategori" required>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
+                    <button type="submit" class="btn btn-primary">Simpan</button>
+                </div>
+                <?=
+                    form_close();
+                ?>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+<?php } ?>
+<!-- /.modal edit -->
+
+<!-- Modal delete -->
+<?php foreach ($kategori as $key => $value) { ?>
+    <div class="modal fade" id="delete<?= $value->id_kategori ?>">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Kategori <?= $value->nama_kategori ?></h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h5>Apakah anda yakin akan menghapus kategori ini ?</h5>
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
+                    <a href="<?= base_url('kategori/delete/' . $value->id_kategori); ?>" class="btn btn-primary">Hapus</a>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+<?php } ?>
+<!-- /.modal delete -->
