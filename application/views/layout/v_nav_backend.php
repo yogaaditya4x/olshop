@@ -33,7 +33,9 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">
+          <a href="<?= base_url('kategori'); ?>" class="nav-link <?php if ($this->uri->segment(1) == 'kategori') {
+                                                                    echo "active";
+                                                                  } ?>">
             <i class="nav-icon fas fa-list"></i>
             <p>
               Kategori
@@ -80,8 +82,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="<?= base_url('user'); ?>" class="nav-link <?php
-                                                              if ($this->uri->segment(1) == 'user') {
+          <a href="<?= base_url('user'); ?>" class="nav-link <?php if ($this->uri->segment(1) == 'user') {
                                                                 echo "active";
                                                               } ?>">
             <i class="nav-icon fas fa-users"></i>
