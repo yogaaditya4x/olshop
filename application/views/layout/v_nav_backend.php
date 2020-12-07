@@ -33,18 +33,30 @@
           </a>
         </li>
         <li class="nav-item">
+          <a href="<?= base_url('user'); ?>" class="nav-link <?php if ($this->uri->segment(1) == 'user') {
+                                                                echo "active";
+                                                              } ?>">
+            <i class="nav-icon fas fa-users"></i>
+            <p>
+              User
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
           <a href="<?= base_url('kategori'); ?>" class="nav-link <?php if ($this->uri->segment(1) == 'kategori') {
                                                                     echo "active";
                                                                   } ?>">
-            <i class="nav-icon fas fa-list"></i>
+            <i class="nav-icon fas fa-list-alt"></i>
             <p>
               Kategori
             </p>
           </a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-list"></i>
+          <a href="<?= base_url('barang'); ?>" class="nav-link <?php if ($this->uri->segment(1) == 'barang') {
+                                                                  echo "active";
+                                                                } ?>">
+            <i class="nav-icon fas fa-box"></i>
             <p>
               Barang
             </p>
@@ -81,16 +93,7 @@
             </p>
           </a>
         </li>
-        <li class="nav-item">
-          <a href="<?= base_url('user'); ?>" class="nav-link <?php if ($this->uri->segment(1) == 'user') {
-                                                                echo "active";
-                                                              } ?>">
-            <i class="nav-icon fas fa-users"></i>
-            <p>
-              User
-            </p>
-          </a>
-        </li>
+
         <li class="nav-item">
           <a href="<?= base_url('auth/logout_user'); ?>" class="nav-link">
             <i class="nav-icon fas fa-sign-out-alt"></i>
