@@ -43,8 +43,8 @@
                             <td><?= $value->deskripsi ?></td>
                             <td class="text-center"><img src="<?= base_url('assets/gambar-barang/' . $value->gambar) ?>" width="100px"></td>
                             <td class="text-center">
-                                <a href="" class="btn btn-warning"><i class="fas fa-pencil-alt"></i></a>
-                                <a href="" class="btn btn-danger"><i class="fas fa-trash"></i></a>
+                                <a href="<?= base_url('barang/edit/' . $value->id_barang); ?>" class="btn btn-warning"><i class="fas fa-pencil-alt"></i></a>
+                                <button class="btn btn-danger" data-toggle="modal" data-target="#delete<?= $value->id_barang ?>"><i class="fas fa-trash"></i></button>
                             </td>
                         </tr>
                     <?php } ?>
@@ -55,3 +55,30 @@
     </div>
     <!-- /.card -->
 </div>
+
+
+<!-- Modal delete -->
+<?php foreach ($barang as $key => $value) { ?>
+    <div class="modal fade" id="delete<?= $value->id_barang ?>">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">barang <?= $value->nama_barang ?></h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h5>Apakah anda yakin akan menghapus barang ini ?</h5>
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
+                    <a href="<?= base_url('barang/delete/' . $value->id_barang); ?>" class="btn btn-primary">Hapus</a>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+<?php } ?>
+<!-- /.modal delete -->
