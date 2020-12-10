@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,6 +15,8 @@
   <!-- DataTables -->
   <link rel="stylesheet" href="<?= base_url(); ?>templates/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
   <link rel="stylesheet" href="<?= base_url(); ?>templates/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <!-- SweetAlert2 -->
+  <link rel="stylesheet" href="<?= base_url(); ?>templates/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="<?= base_url(); ?>templates/dist/css/adminlte.min.css">
   <!-- Google Font: Source Sans Pro -->
