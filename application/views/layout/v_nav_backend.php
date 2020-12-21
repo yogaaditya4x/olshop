@@ -98,10 +98,10 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-th"></i>
+          <a href="<?= base_url('admin/setting'); ?>" class="nav-link">
+            <i class="nav-icon fas fa-asterisk"></i>
             <p>
-              Simple Link
+              Setting
             </p>
           </a>
         </li>

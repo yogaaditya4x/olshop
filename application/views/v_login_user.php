@@ -33,10 +33,9 @@
 
 
         <?php
-
         echo validation_errors('<div class="alert alert-warning alert-dismissible">
-      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-      <h5><i class="icon fas fa-exclamation-triangle"></i> Perhatian !</h5>', '</div>');
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <h5><i class="icon fas fa-exclamation-triangle"></i> Perhatian !</h5>', '</div>');
 
         if ($this->session->flashdata('error')) {
           echo '<div class="alert alert-danger alert-dismissible">
