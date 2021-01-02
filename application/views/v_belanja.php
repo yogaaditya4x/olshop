@@ -76,7 +76,7 @@
                 <a href="<?= base_url('belanja/clear'); ?>" class="btn btn-danger btn-flat">
                     <i class="fa fa-recycle"></i> Clear Cart
                 </a>
-                <a href="#" class="btn btn-success btn-flat">
+                <a href="<?= base_url('belanja/cekout') ?>" class="btn btn-success btn-flat">
                     <i class="fa fa-check-square"></i> Checkout
                 </a>
 

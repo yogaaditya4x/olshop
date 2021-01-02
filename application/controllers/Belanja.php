@@ -62,4 +62,14 @@ class Belanja extends CI_Controller
         $this->cart->destroy();
         redirect('belanja');
     }
+
+    public function cekout()
+    {
+        $this->pelanggan_login->proteksi_halaman();
+        $data = array(
+            'title' => 'Cekout Belanja',
+            'isi'   => 'v_cekout'
+        );
+        $this->load->view('layout/v_wrapper_frontend', $data, FALSE);
+    }
 }

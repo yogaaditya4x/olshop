@@ -30,7 +30,6 @@
                         <select name="kota" class="form-control">
                             <option value="<?= $setting->lokasi ?>"><?= $setting->lokasi ?></option>
                         </select>
-
                     </div>
                 </div>
             </div>
