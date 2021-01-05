@@ -63,7 +63,7 @@
               <i class="fas fa-user mr-2"></i> Akun saya
             </a>
             <div class="dropdown-divider"></div>
-            <a href="#" class="dropdown-item">
+            <a href="<?= base_url('pesanan_saya') ?>" class="dropdown-item">
               <i class="fas fa-shopping-cart mr-2"></i> Pesanan saya
             </a>
             <div class="dropdown-divider"></div>
@@ -103,7 +103,8 @@
                     </h3>
                     <p class="text-sm"><?= $value['qty'] ?> x Rp.<?= number_format($value['price'], 0) ?></p>
                     <p class="text-sm text-muted">
-                      <i class="fa fa-calculator"></i> Rp.<?= $this->cart->format_number($value['subtotal']); ?></p>
+                      <i class="fa fa-calculator"></i> Rp.<?= $this->cart->format_number($value['subtotal']); ?>
+                    </p>
                   </div>
                 </div>
               </a>
